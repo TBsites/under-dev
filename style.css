@@ -1,116 +1,345 @@
-* {
-  margin:0;
-  padding:0;
+@media screen and (max-width: 600px) {
+*{
+padding:0;
+margin:0;
 }
 
-html, body {
-  height: 100%;
-  background: #434A54;
-  color: white;
-  font-family: 'Inconsolata', monospace;
-  font-size: 100%;
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,49,121,1) 35%, rgba(0,212,255,1) 100%);
 }
-.maintenance {
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  font-size: 3rem;
-}
+
+
+
 .container {
-  display: table;
-  margin: 0 auto;
-  max-width: 1024px;
-  width: 100%;
-  height: 100%;
-  align-content: center;
-  position: relative;
-  box-sizing: border-box;
-  .what-is-up {
+width:100%;
+
+
+
+}
+.container-1 {
+width:100%;
+
+
+
+
+
+}
+
+#big-text {
+color:white;
+font-size:26px;
+  margin-left:-0.5em;
+  margin-top:-0.9em;
+font-weight:900;
+  float:left;
+font-family: 'Trebuchet MS';
+}
+#anime {
+animation-name: anime;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+color:yellow;
+
+font-size:40px;
+}
+@keyframes anime {
+0% {
+color: teal;
+}
+50% {
+ color:rgb(177, 140, 47);
+}
+100% {
+color: rgb(231, 173, 27);
+}
+}
+
+#small-text {
+
+margin-top:1em;
+ margin-left:-0.5em;
+color:white;
+font-size:18px;
+font-weight:600;
+font-family: 'Lucida Sans Regular';
+  left:0;
+}
+
+
+.buttons{
+margin-top:2.8em;
+
+
+padding: 5px;
+}
+#button-1 {
+padding:14px 12px;
+color:white;
+font-weight:600;
+font-family:'Trebuchet MS';
+background-color:black;
+border: 2px solid white;
+text-decoration: none;
+}
+  #call {
+    margin-top:2em;
+  }
+#button-2 {
+padding:14px 38px;
+color:white;
+background-color:royalblue;
+font-weight:900;
+font-family:'Trebuchet MS';
+text-decoration: none;
+}
+
+
+#address {
+    bottom:2%;
+    border-top: 2px solid gainsboro;
+    left:1%;
+    font-weight: 600;
     position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    vertical-align: middle;
-    text-align: center;
-    box-sizing: border-box;
-    .spinny-cogs {
-      display: block;
-      margin-bottom: 2rem;
-      .fa {
-        &:nth-of-type(1) {
-          @extend .fa-spin-one;
+    font-size: 16PX;
+    font-family: monospace;
+}
+#copyright {
+    bottom:2%;
+    border-top: 2px solid gainsboro;
+    right:2%;
+    font-weight: 600;
+    position: absolute;
+    font-size: 16PX;
+    font-family: monospace;
+}
+}
+
+    *{
+        padding:0;
+        margin:0;
         }
-
-        &:nth-of-type(3) {
-          @extend .fa-spin-two;
+        body{
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,49,121,1) 35%, rgba(0,212,255,1) 100%);
         }
-      }
-    }
-  }
-}
-
-@-webkit-keyframes fa-spin-one {
-  0% {
-    -webkit-transform: translateY(-2rem) rotate(0deg);
-    transform: translateY(-2rem) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translateY(-2rem) rotate(-359deg) ;
-    transform: translateY(-2rem) rotate(-359deg) ;
-  }
-}
-@keyframes fa-spin-one {
-  0% {
-    -webkit-transform: translateY(-2rem) rotate(0deg);
-    transform: translateY(-2rem) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translateY(-2rem) rotate(-359deg) ;
-    transform: translateY(-2rem) rotate(-359deg) ;
-  }
-}
-.fa-spin-one {
-  -webkit-animation: fa-spin-one 1s infinite linear;
-  animation: fa-spin-one 1s infinite linear;
-}
-
-@-webkit-keyframes fa-spin-two {
-  0% {
-    -webkit-transform: translateY(-.5rem) translateY(1rem) rotate(0deg);
-    transform: translateY(-.5rem) translateY(1rem) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translateY(-.5rem) translateY(1rem) rotate(-359deg);
-    transform: translateY(-.5rem) translateY(1rem) rotate(-359deg);
-  }
-}
-@keyframes fa-spin-two {
-  0% {
-    -webkit-transform: translateY(-.5rem) translateY(1rem) rotate(0deg);
-    transform: translateY(-.5rem) translateY(1rem) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translateY(-.5rem) translateY(1rem) rotate(-359deg);
-    transform: translateY(-.5rem) translateY(1rem) rotate(-359deg);
-  }
-}
-.fa-spin-two {
-  -webkit-animation: fa-spin-two 2s infinite linear;
-  animation: fa-spin-two 2s infinite linear;
-}
-.made-by-me {
-  position: fixed;
-  text-decoration: none;
-  box-sizing: border-box;
-  right: 16px;
-  bottom: 16px;
-  width: 44px;
-  height: 44px;
-  display: block;
-  border-radius: 100%;
-  border: 2px solid white;
-  box-shadow: 0 0 30px 0 rgba(black, .3);
-  font-size: 0px;
-  background: url("https://avatars.githubusercontent.com/u/107596976?s=400&u=3dec27cc007ee83ab264a8f421ec41d5e5341de3&v=4") no-repeat center;
-  background-size: cover;
-}
+        
+        #icon {
+            margin-left: 4%;
+            margin-top: 1em;
+        }
+        #logo {
+            border-radius: 200px;
+        }
+        .container {
+        width:100%;
+        box-sizing:border-box;
+        
+        
+        }
+        
+        .container-1 {
+        
+        
+        left: 20%;
+        height:100%;
+        
+        
+        
+        }
+        .text{
+        margin-top: 6em;
+        margin-left: 4em;
+        
+        }
+        #big-text {
+        color:white;
+        font-size:46px;
+        font-weight:900;
+        font-family: 'Trebuchet MS';
+        }
+        #anime {
+        animation-name: anime;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        color:yellow;
+        -webkit-animation:  2s spin linear infinite;
+        
+        animation: 2s spin linear infinite;
+        
+        font-size:40px;
+        }
+        @keyframes anime {
+        0% {
+        color: rgb(202, 174, 15);
+        }
+        50% {
+         color:rgb(177, 140, 47);
+        }
+        100% {
+        color: rgb(231, 173, 27);
+        }
+        }
+    
+        #small-text {
+        
+        margin-top:1em;
+        color:white;
+        font-size:18px;
+        font-weight:600;
+        font-family: 'Lucida Sans Regular';
+        }
+        
+        
+        .buttons{
+        margin-top:1.8em;
+        margin-left:4em;
+        
+        padding: 5px;
+        }
+        #button {
+        padding:14px 12px;
+        color:white;
+        font-size: 15px;
+        font-weight:600;
+        font-family:'Trebuchet MS';
+        background-color:black;
+        border: 2px solid white;
+        text-decoration: none;
+        margin-right:1.5em;
+        }
+        #button-2 {
+        padding:14px 38px;
+        color:white;
+        background-color:royalblue;
+        font-weight:900;
+        font-family:'Trebuchet MS';
+        text-decoration: none;
+        }
+        .socials {
+            position: absolute;
+            left:90%;
+            top:20%;
+        }
+        .robot {
+            position: absolute;
+            left:60%;
+            margin-top: -22%;
+            overflow: hidden;
+        }
+       
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 30%;
+            top: 50px;
+            width: 40%; /* Full width */
+            height: 60%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: white; /* white w/ opacity */
+            padding-top: 60px;
+            border-radius: 50px;
+          }
+          
+          /* Modal Content/Box */
+          
+          
+          /* The Close Button */
+          .close {
+            /* Position it in the top right corner outside of the modal */
+            position: absolute;
+            right: 45px;
+            top: 15px;
+            color: turquoise;
+            z-index: 1;
+            font-size: 45px;
+            font-weight: bold;
+          }
+          
+          /* Close button on hover */
+          .close:hover,
+          .close:focus {
+            color: red;
+            cursor: pointer;
+          }
+          
+          /* Add Zoom Animation */
+          .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+          }
+          
+          @-webkit-keyframes animatezoom {
+            from {-webkit-transform: scale(0)}
+            to {-webkit-transform: scale(1)}
+          }
+          
+          @keyframes animatezoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+          }
+          .Name {
+            background-image:url("hero.jpg");
+            height:50%;
+            Width:100%;
+            top:0;
+            position: absolute;
+            
+            
+            }
+            .Name h2 {
+            font-family:cursive;
+            text-align:center;
+            color:gainsboro;
+            font-size:38px;
+            margin-top:2.5em;
+            
+            }
+            .other {
+            position:absolute;
+            top:60%;
+            left:10px;
+            
+            }
+            #Email a {
+            text-decoration:royalblue;
+            font-size:17px;
+            font-family:'lucida sans regular';
+            font-weight:600;
+            color:black;
+            
+            
+            
+            }
+            #Email img {
+            margin-bottom:-0.4em;
+            }
+            #tel {
+            margin-top:2em;
+            }
+            #tel a {
+            text-decoration:royalblue;
+            font-size:17px;
+            font-family:'lucida sans regular';
+            font-weight:600;
+            color:black;
+            
+            
+            
+            }
+            #tel img {
+            margin-bottom:-0.4em;
+            }
+            
+            #address{
+            font-size:17px;
+            font-family:'lucida sans regular';
+            font-weight:600;
+            color:black;
+            margin-top:2em;
+            }
+            #address img {
+            margin-bottom: -0.4em;
+            }
